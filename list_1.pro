@@ -115,4 +115,14 @@ V = 1./3 * !PI * r^2 * h
 PRINT, 'Area is   ', A
 PRINT, 'Volume is ', V
 
+
+; Bonus Task
+PRINT,"===== Bonus Task ====="
+date = JulianDate(2020, 11, 7)
+args = INDGEN(30, START=date - 15)
+values = []
+FOR i = date - 15, date + 15 DO values = [values, MoonPhase(i)]
+print, args
+PLOT, args, values
+
 END
